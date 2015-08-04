@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+    #!/usr/bin/env bash
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 APP="$1";  IMAGE="dokku/$APP"
 
@@ -8,7 +8,7 @@ BOWERSCRIPT="
 cd /app
 PATH=\$PATH:/app/vendor/node/bin:/app/.heroku/node/bin
 if [[ -f ./bower.json ]]; then
-	npm install -g bower && bower install --allow-root
+	npm install -g bower && bower install --allow-root --config.interactive=false
 fi
 "
 
